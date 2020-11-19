@@ -15,7 +15,7 @@ function App() {
       <Focuser />
       {/* {/* <Counter /> */}
       <ProfileViewer name="Colt" color="teal" />
-      <ProfileViewer name="Matt" color="orange" />
+      <ProfileViewer name="Matt" color="orange" />{/** passing in a prop that is not in the useEffect hook (color in this example) will cause a re-render but useEffect will not be updated unless specified to. */}
       <ProfileViewerWithSearch />
       <TimerWrapper />
       <Timer2 />
