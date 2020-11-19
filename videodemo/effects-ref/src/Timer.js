@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";// use effect is imported in
 
 const Timer = () => {
   const [seconds, setSeconds] = useState(0);
@@ -16,7 +16,9 @@ const Timer = () => {
       console.log(intervalId)
       clearInterval(intervalId)
     }
-  }, [])
+  }, []) /** <--ignore the above comment. you need this empty array
+              this prevents the useEffect from reseting and will force it
+              to persist across re-renderings.*/
 
 
   return <h1>{seconds}</h1>
