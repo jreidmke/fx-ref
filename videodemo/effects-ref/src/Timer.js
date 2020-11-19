@@ -11,7 +11,7 @@ const Timer = () => {
     every re-render (every time seconds state is set). this will cause
     a huge mess! useEffect() allows this to persist across re-renderings*/
 
-    return () => {
+    return () => { //this right here is the CLEAN UP function! it runs whenever useEffect is called. 
       console.log("CLEANUP FUNCTION!!")
       console.log(intervalId)
       clearInterval(intervalId)
